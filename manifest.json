@@ -1,0 +1,24 @@
+{
+  "name": "Teams trick",
+  "version": "1.0",
+  "description": "WTF BTW",
+  "background": {
+    "scripts": ["spamer.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://teams.microsoft.com/*"
+      ],
+      "js": ["spamer.js", "jquery-3.3.1.slim.min.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "scripts": ["popup.js"]
+  },
+  "permissions": [
+    "*://teams.microsoft.com/*"
+  ],
+  "manifest_version": 2
+}
